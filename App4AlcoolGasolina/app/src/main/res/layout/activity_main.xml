@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="app1.cursoandroid.com.app4alcoolgasolina.MainActivity"
+    android:background="#94bd31">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="81dp"
+        app:srcCompat="@drawable/logo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:text="Preço Alcool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView"
+        android:textSize="@dimen/texto_padrao"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:text="Preço Gasolina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textSize="@dimen/texto_padrao"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="26dp"
+        android:id="@+id/precoAlcoolId"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:background="@android:color/white"
+        android:padding="@dimen/padding_caixa_texto" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_alignBottom="@+id/precoAlcoolId"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:id="@+id/precoGasolinaId"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:background="@android:color/white"
+        android:padding="@dimen/padding_caixa_texto" />
+
+    <Button
+        android:text="Verificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/verificarBotaoId"
+        android:layout_alignRight="@+id/precoGasolinaId"
+        android:layout_alignEnd="@+id/precoGasolinaId"
+        android:layout_alignLeft="@+id/precoAlcoolId"
+        android:layout_alignStart="@+id/precoAlcoolId" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/verificarBotaoId"
+        android:layout_marginTop="24dp"
+        android:id="@+id/textoResultadoId"
+        android:layout_alignRight="@+id/verificarBotaoId"
+        android:layout_alignEnd="@+id/verificarBotaoId"
+        android:layout_alignLeft="@+id/verificarBotaoId"
+        android:layout_alignStart="@+id/verificarBotaoId"
+        android:textColor="@android:color/black"
+        android:padding="@dimen/padding_caixa_texto" />
+</RelativeLayout>
