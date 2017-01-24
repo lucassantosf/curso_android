@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "644710644800",
+    "firebase_url": "https://whatsappcurso-61b43.firebaseio.com",
+    "project_id": "whatsappcurso-61b43",
+    "storage_bucket": "whatsappcurso-61b43.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644710644800:android:a44dbbd963d1b3da",
+        "android_client_info": {
+          "package_name": "whatsappclone.cursoandroid.com.whatsappclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644710644800-77ei30am8fdoknl94ulvlsjl83kbhftk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "whatsappclone.cursoandroid.com.whatsappclone",
+            "certificate_hash": "2A122E96679AD0635C999B3C97094D7B92C795E8"
+          }
+        },
+        {
+          "client_id": "644710644800-7bh840a0e755v65bc3tnq0kos8u7m74i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlbQGagJLK_biSLQI1c9O0zjUGPnPKRS0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644710644800-7bh840a0e755v65bc3tnq0kos8u7m74i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
