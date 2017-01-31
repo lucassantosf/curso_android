@@ -8,20 +8,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import whatsapp.cursoandroid.com.whatsapp.R;
+import whatsappclone.cursoandroid.com.whatsappclone.config.ConfiguracaoFirebase;
 
 
 public class MainActivity extends AppCompatActivity {
-
-
-    //private DatabaseReference referenciaFirebase = FirebaseDatabase.getInstance().getReference();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //referenciaFirebase.child("pontos").setValue("100");
-
     }
 }
