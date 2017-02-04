@@ -12,6 +12,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 
 import whatsapp.cursoandroid.com.whatsapp.R;
@@ -40,10 +43,14 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 usuario = new Usuario();
-                usuario.setNome( nome.getText().toString() );
-                usuario.setEmail( email.getText().toString() );
-                usuario.setSenha( senha.getText().toString() );
-                cadastrarUsuario();
+                if( nome.getText().toString().equals("") || email.getText().toString().equals("") || senha.getText().toString().equals("") )
+                    Toast.makeText(CadastroUsuarioActivity.this, "Erro : Campo vazio", Toast.LENGTH_LONG).show();
+                else {
+                    usuario.setNome(nome.getText().toString());
+                    usuario.setEmail(email.getText().toString());
+                    usuario.setSenha(senha.getText().toString());
+                    cadastrarUsuario();
+                }
             }
         });
     }
@@ -57,14 +64,30 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if( task.isSuccessful()){
-                    Toast.makeText(CadastroUsuarioActivity.this, "Sucesso ao cadastrar usuario", Toast.LENGTH_LONG).show();
-
+                    Toast.makeText(CadastroUsuarioActivity.this, "Sucesso ao cadastrar usuário", Toast.LENGTH_LONG).show();
                     FirebaseUser usuarioFirebase= task.getResult().getUser() ;
                     usuario.setId( usuarioFirebase.getUid() );
                     usuario.salvar();
-
+                    autenticacao.signOut();
+                    finish();
                 }else{
-                    Toast.makeText(CadastroUsuarioActivity.this, "Erro ao cadastrar usuario", Toast.LENGTH_LONG).show();
+
+                    String erroExcessao = "";
+
+                    try{
+                        throw task.getException();
+                    }
+                    catch (FirebaseAuthWeakPasswordException e) {
+                        erroExcessao = "Digite uma senha mais forte";
+                    } catch (FirebaseAuthInvalidCredentialsException e) {
+                        erroExcessao = "Email inválido, informe novamente ";
+                    } catch (FirebaseAuthUserCollisionException e) {
+                        erroExcessao = "Este e-mail já está em uso ";
+                    } catch (Exception e) {
+                        erroExcessao = "Erro ao efetuar cadastro";
+                        e.printStackTrace();
+                    }
+                    Toast.makeText(CadastroUsuarioActivity.this, "Erro : " +erroExcessao , Toast.LENGTH_LONG).show();
                 }
             }
         });
