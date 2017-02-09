@@ -22,7 +22,7 @@
         <activity
             android:name="whatsappclone.cursoandroid.com.whatsappclone.activity.MainActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name="whatsappclone.cursoandroid.com.whatsappclone.activity.CadastroUsuarioActivity"></activity>
+        <activity android:name="whatsappclone.cursoandroid.com.whatsappclone.activity.CadastroUsuarioActivity" />
     </application>
 
 </manifest>
