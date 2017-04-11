@@ -1,22 +1,22 @@
 package whatsappclone.cursoandroid.com.whatsappclone.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import whatsapp.cursoandroid.com.whatsapp.R;
+import whatsappclone.cursoandroid.com.whatsappclone.Adapter.TabAdapter;
 import whatsappclone.cursoandroid.com.whatsappclone.config.ConfiguracaoFirebase;
+import whatsappclone.cursoandroid.com.whatsappclone.helper.SlidingTabLayout;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth autenticacao;
     private Toolbar toolbar;
     private FirebaseAuth firebase;
+
+    private SlidingTabLayout slidingTabLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,21 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("WhatsApp");
         setSupportActionBar(toolbar);
+
+        slidingTabLayout = (SlidingTabLayout) findViewById(R.id.stl_tabs);
+        viewPager = (ViewPager) findViewById(R.id.vp_pagina);
+
+        //Configurar Sliding tabs
+        slidingTabLayout.setDistributeEvenly(true);
+        slidingTabLayout.setSelectedIndicatorColors(ContextCompat.getColor(this, R.color.colorAccent));
+
+        //Configurar o adapter
+        TabAdapter tabAdapter = new TabAdapter(getSupportFragmentManager());
+
+        viewPager.setAdapter(tabAdapter);
+
+        slidingTabLayout.setViewPager( viewPager );
+
     }
 
 
