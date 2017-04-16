@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="whatsappclone.cursoandroid.com.whatsappclone.activity.MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.whatsappandroid.cursoandroid.whatsappclone.MainActivity">
 
-    <include android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
-
-    <whatsappclone.cursoandroid.com.whatsappclone.helper.SlidingTabLayout
-        android:id="@+id/stl_tabs"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"></whatsappclone.cursoandroid.com.whatsappclone.helper.SlidingTabLayout>
-
-    <android.support.v4.view.ViewPager android:id="@+id/vp_pagina"
-        android:layout_width="match_parent" android:layout_height="0dp"
-        android:layout_weight="1" />
-
-</LinearLayout>
+        android:text="Hello World!" />
+</RelativeLayout>

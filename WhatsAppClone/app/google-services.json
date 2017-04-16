@@ -19,7 +19,51 @@
           "client_type": 1,
           "android_info": {
             "package_name": "whatsappclone.cursoandroid.com.whatsappclone",
-            "certificate_hash": "2A122E96679AD0635C999B3C97094D7B92C795E8"
+            "certificate_hash": "2a122e96679ad0635c999b3c97094d7b92c795e8"
+          }
+        },
+        {
+          "client_id": "644710644800-7bh840a0e755v65bc3tnq0kos8u7m74i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlbQGagJLK_biSLQI1c9O0zjUGPnPKRS0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644710644800-7bh840a0e755v65bc3tnq0kos8u7m74i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644710644800:android:5e360bac89b8b7f6",
+        "android_client_info": {
+          "package_name": "com.whatsappandroid.cursoandroid.whatsappclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644710644800-788s19qb5ev5p0v54nij8mapu45094ck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.whatsappandroid.cursoandroid.whatsappclone",
+            "certificate_hash": "a94ffe9a75d90f66d9c49136557a6f4a5f1680e6"
           }
         },
         {
