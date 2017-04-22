@@ -3,4 +3,6 @@
     <string name="botao_cadastrar">Cadastrar</string>
     <string name="texto_validacao">VALIDACAO</string>
     <string name="botao_validar">VALIDAR</string>
+    <string name="botao_logar">Logar</string>
+    <string name="texto_cadastre">Não tem conta? Cadastre-se</string>
 </resources>
