@@ -17,7 +17,9 @@ import android.widget.Toast;
 import com.github.rtoshiro.util.format.MaskFormatter;
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
+import com.google.firebase.database.DatabaseReference;
 import com.whatsappandroid.cursoandroid.whatsappclone.R;
+import com.whatsappandroid.cursoandroid.whatsappclone.config.ConfiguracaoFirebase;
 import com.whatsappandroid.cursoandroid.whatsappclone.helper.Permissao;
 import com.whatsappandroid.cursoandroid.whatsappclone.helper.Preferencias;
 
@@ -26,12 +28,15 @@ import java.util.Random;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private DatabaseReference referenciaFirebase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
+        referenciaFirebase = ConfiguracaoFirebase.getFirebase();
+        referenciaFirebase.child("pontos").setValue("800");
 
     }
 
