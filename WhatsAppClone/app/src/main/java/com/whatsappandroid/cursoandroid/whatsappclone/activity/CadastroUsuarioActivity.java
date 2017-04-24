@@ -3,6 +3,8 @@ package com.whatsappandroid.cursoandroid.whatsappclone.activity;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.whatsappandroid.cursoandroid.whatsappclone.R;
 import com.whatsappandroid.cursoandroid.whatsappclone.config.ConfiguracaoFirebase;
 import com.whatsappandroid.cursoandroid.whatsappclone.model.Usuario;
+
 
 public class CadastroUsuarioActivity extends AppCompatActivity {
 
@@ -40,16 +43,13 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
         senha = (EditText) findViewById(R.id.edit_cadastro_senha);
         botaoCadastrar = (Button) findViewById(R.id.bt_cadastrar);
 
-
         botaoCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 usuario = new Usuario();
-                usuario.setNome(nome.getText().toString());
+                usuario.setNome( nome.getText().toString() );
                 usuario.setEmail(email.getText().toString());
-                usuario.setSenha(email.getText().toString());
+                usuario.setSenha(senha.getText().toString());
 
                 if(nome.getText().length() == 0 || email.getText().length() == 0 || senha.getText().length() == 0){
                     Toast.makeText(CadastroUsuarioActivity.this, "Preencha todos os campos!", Toast.LENGTH_LONG).show();
@@ -59,18 +59,20 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
 
             }
         });
+
     }
 
     private void cadastrarUsuario(){
-
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         autenticacao.createUserWithEmailAndPassword(
-            usuario.getEmail(), usuario.getSenha()
+                usuario.getEmail(),
+                usuario.getSenha()
         ).addOnCompleteListener(CadastroUsuarioActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    Toast.makeText(CadastroUsuarioActivity.this, "Sucesso ao cadastrar usuário !", Toast.LENGTH_LONG).show();
+                if( task.isSuccessful() ){
+                    Toast.makeText(CadastroUsuarioActivity.this, "Sucesso ao cadastrar usuário", Toast.LENGTH_LONG ).show();
+
                     FirebaseUser usuarioFirebase = task.getResult().getUser();
                     usuario.setId( usuarioFirebase.getUid() );
                     usuario.salvar();
@@ -78,24 +80,27 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                     autenticacao.signOut();
                     finish();
 
-                }else{
+                }else {
 
-                    String erroExcessao = "";
+                    String erroExcecao = "";
+
                     try{
                         throw task.getException();
-                    } catch (FirebaseAuthWeakPasswordException e){
-                        erroExcessao = "Digite um senha mais forte, contendo mais caracteres e com letras e números!";
+                    } catch (FirebaseAuthWeakPasswordException e) {
+                        erroExcecao = "Digite uma senha mais forte, contendo mais caracteres e com letras e números!";
                     } catch (FirebaseAuthInvalidCredentialsException e) {
-                        erroExcessao = "O e-mail digitado é inválido, digite um novo email!";
+                        erroExcecao = "O e-mail digitado é inválido, digite um novo e-mail!";
                     } catch (FirebaseAuthUserCollisionException e) {
-                        erroExcessao = "Esse e-mail já está em uso no App !";
+                        erroExcecao = "Esse e-mail já está em uso no App!";
                     } catch (Exception e) {
+                        erroExcecao = "Digite uma senha mais forte, contendo mais caracteres e com letras e números!";
                         e.printStackTrace();
                     }
 
-                    Toast.makeText(CadastroUsuarioActivity.this, "Erro: " + erroExcessao, Toast.LENGTH_LONG).show();
+                    Toast.makeText(CadastroUsuarioActivity.this, "Erro: " + erroExcecao, Toast.LENGTH_LONG ).show();
                 }
             }
         });
     }
+
 }
