@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -18,7 +19,7 @@ import com.whatsappandroid.cursoandroid.whatsappclone.config.ConfiguracaoFirebas
 public class MainActivity extends AppCompatActivity {
 
     //private Firebase firebase;
-    
+    private FirebaseAuth usuarioAutenticacao;
     private Button botaoSair;
     private Toolbar toolbar;
 
@@ -26,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         DatabaseReference firebase = ConfiguracaoFirebase.getFirebase();
 
+        usuarioAutenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("WhatsApp");
         setSupportActionBar(toolbar);
@@ -40,4 +41,29 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_main, menu);
         return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+
+            case R.id.item_sair:
+                deslogarUsuario();
+                return true;
+            case R.id.item_configuracoes:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+    }
+
+    public void deslogarUsuario(){
+        usuarioAutenticacao.signOut();
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 }
+
