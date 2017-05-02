@@ -23,6 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.whatsappandroid.cursoandroid.whatsappclone.R;
 import com.whatsappandroid.cursoandroid.whatsappclone.config.ConfiguracaoFirebase;
 import com.whatsappandroid.cursoandroid.whatsappclone.helper.Base64Custom;
+import com.whatsappandroid.cursoandroid.whatsappclone.helper.Preferencias;
 import com.whatsappandroid.cursoandroid.whatsappclone.model.Usuario;
 
 
@@ -75,11 +76,14 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if( task.isSuccessful() ){
                     Toast.makeText(CadastroUsuarioActivity.this, "Sucesso ao cadastrar usuário", Toast.LENGTH_LONG ).show();
-
                     String identificadorUsuario = Base64Custom.codificarBase64(usuario.getEmail());
-
                     usuario.setId(identificadorUsuario);
                     usuario.salvar();
+
+                    Preferencias preferencias = new Preferencias(CadastroUsuarioActivity.this);
+                    preferencias.salvarDados( identificadorUsuario );
+
+
 
                     abrirLoginUsuario();
 

@@ -29,6 +29,7 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.database.DatabaseReference;
 import com.whatsappandroid.cursoandroid.whatsappclone.R;
 import com.whatsappandroid.cursoandroid.whatsappclone.config.ConfiguracaoFirebase;
+import com.whatsappandroid.cursoandroid.whatsappclone.helper.Base64Custom;
 import com.whatsappandroid.cursoandroid.whatsappclone.helper.Permissao;
 import com.whatsappandroid.cursoandroid.whatsappclone.helper.Preferencias;
 import com.whatsappandroid.cursoandroid.whatsappclone.model.Usuario;
@@ -90,6 +91,11 @@ public class LoginActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()){
+
+                    Preferencias preferencias = new Preferencias(LoginActivity.this);
+                    String identificadorUsuarioLogado = Base64Custom.codificarBase64(usuario.getEmail());
+                    preferencias.salvarDados( identificadorUsuarioLogado );
+
                     abrirTelaPrincipal();
                     Toast.makeText(LoginActivity.this, "Sucesso ao fazer login !", Toast.LENGTH_LONG).show();
                 }
