@@ -20,6 +20,8 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 import com.whatsappandroid.cursoandroid.whatsappclone.R;
 import com.whatsappandroid.cursoandroid.whatsappclone.config.ConfiguracaoFirebase;
 import com.whatsappandroid.cursoandroid.whatsappclone.helper.Base64Custom;
@@ -36,6 +38,8 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
     private Usuario usuario;
 
     private FirebaseAuth autenticacao;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,15 +79,13 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if( task.isSuccessful() ){
+
                     Toast.makeText(CadastroUsuarioActivity.this, "Sucesso ao cadastrar usuário", Toast.LENGTH_LONG ).show();
                     String identificadorUsuario = Base64Custom.codificarBase64(usuario.getEmail());
                     usuario.setId(identificadorUsuario);
                     usuario.salvar();
-
                     Preferencias preferencias = new Preferencias(CadastroUsuarioActivity.this);
-                    preferencias.salvarDados( identificadorUsuario );
-
-
+                    preferencias.salvarDados( identificadorUsuario , usuario.getNome());
 
                     abrirLoginUsuario();
 
