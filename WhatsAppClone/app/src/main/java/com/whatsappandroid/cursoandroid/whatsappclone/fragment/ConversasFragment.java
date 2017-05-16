@@ -1,11 +1,13 @@
 package com.whatsappandroid.cursoandroid.whatsappclone.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -15,7 +17,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 import com.whatsappandroid.cursoandroid.whatsappclone.Adapter.ConversaAdapter;
 import com.whatsappandroid.cursoandroid.whatsappclone.R;
+import com.whatsappandroid.cursoandroid.whatsappclone.activity.ConversaActivity;
 import com.whatsappandroid.cursoandroid.whatsappclone.config.ConfiguracaoFirebase;
+import com.whatsappandroid.cursoandroid.whatsappclone.helper.Base64Custom;
 import com.whatsappandroid.cursoandroid.whatsappclone.helper.Preferencias;
 import com.whatsappandroid.cursoandroid.whatsappclone.model.Conversa;
 
@@ -39,7 +43,7 @@ public class ConversasFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_conversas2, container, false);
@@ -76,6 +80,21 @@ public class ConversasFragment extends Fragment {
             public void onCancelled(DatabaseError databaseError) {
             }
         };
+
+        // Adicionar envento de clique na lista
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Conversa conversa = conversas.get(position);
+                Intent intent = new Intent(getActivity(), ConversaActivity.class);
+                intent.putExtra("nome", conversa.getNome());
+                String email = Base64Custom.decodificarBase64( conversa.getIdUsuario() );
+                intent.putExtra("email", email);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 
