@@ -38,7 +38,7 @@ public class StarterApplication extends Application {
 
 
       // Teste de configuração do App
-      ParseObject pontuacao = new ParseObject("Pontuacao");
+      /*ParseObject pontuacao = new ParseObject("Pontuacao");
       pontuacao.put("pontos", 100);
       pontuacao.saveInBackground(new SaveCallback() {
           public void done(ParseException e) {
@@ -48,10 +48,9 @@ public class StarterApplication extends Application {
                   Log.i("TesteExecucao", "Falha ao salvar os dados!!!");
               }
           }
-      });
+      });*/
 
-
-      ParseUser.enableAutomaticUser();
+      //ParseUser.enableAutomaticUser();
     ParseACL defaultACL = new ParseACL();
     // Optionally enable public read access.
     // defaultACL.setPublicReadAccess(true);
