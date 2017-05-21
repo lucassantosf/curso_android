@@ -6,7 +6,7 @@
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  */
-package com.parse.starter;
+package com.parse.starter.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -25,6 +25,7 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
+import com.parse.starter.R;
 
 import java.util.List;
 
