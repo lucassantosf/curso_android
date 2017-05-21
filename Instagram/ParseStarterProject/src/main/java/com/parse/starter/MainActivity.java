@@ -17,11 +17,14 @@ import android.view.MenuItem;
 
 import com.parse.FindCallback;
 import com.parse.GetCallback;
+import com.parse.LogInCallback;
 import com.parse.ParseAnalytics;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 import com.parse.SaveCallback;
+import com.parse.SignUpCallback;
 
 import java.util.List;
 
@@ -30,75 +33,52 @@ public class MainActivity extends AppCompatActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.activity_main);
+/*
+      // Cadastro de usuários
 
+      ParseUser usuario = new ParseUser();
+      usuario.setUsername("lucas");
+      usuario.setPassword("123456");
+      usuario.setEmail("lucas@gmail.com");
 
-    /*
-      ParseObject pontuacao = new ParseObject("Pontuacao");
-      pontuacao.put("nome","Tiana");
-      pontuacao.put("pontos", 888);
-      //pontuacao.saveInBackground(); // comando simples para salvar
-
-      pontuacao.saveInBackground(new SaveCallback() {
+      // cadastrar
+      usuario.signUpInBackground(new SignUpCallback() {
           @Override
           public void done(ParseException e) {
-                if(e == null){// não temos erro, pois objeto esta nulo
-                    Log.i("salvarPontos", "Dados salvos com sucesso");
-                }else{
-                    Log.i("salvarPontos", "Erro ao salvar ");
-                }
-          }
-      });
-
-*/
-      /*
-      ParseQuery<ParseObject> consulta = ParseQuery.getQuery("Pontuacao");
-      consulta.getInBackground("qzhwW1ISgH", new GetCallback<ParseObject>() {
-          @Override
-          public void done(ParseObject object, ParseException e) {
-
-              if(e == null){// não temos erro, pois objeto esta nulo
-
-                  object.put("pontos", 666);
-                  object.saveInBackground();
-
-              }else{
-                  Log.i("consultaObjeto", "Erro ao consultar objeto  ");
+              if ( e == null){ //deu certo
+                  Log.i("CadastroUsuario", "Sucesso ao cadastrar usuario " + e.getMessage());
+              }else{ // erro
+                  Log.i("CadastroUsuario", "Erro ao cadastrar usuario " + e.getMessage());
               }
 
           }
       });
         */
 
-      ParseQuery<ParseObject> filtro = ParseQuery.getQuery("Pontuacao");
+      //Verificar usuario logado
+      //deslogar usuario
+      //ParseUser.logOut();
+        /*
+      if( ParseUser.getCurrentUser() != null){
+          Log.i("LoginUsuario", "Usuario logado ");
+      }else{// Não esta logado
+          Log.i("LoginUsuario", "Usuario não logado " );
+      }*/
 
-      //Aplciando filtros na listagem de dados
-      filtro.whereGreaterThan("pontos", 800);
-      //filtro.whereGreaterThanOrEqualTo("pontos", 800);
-      //filtro.whereLessThan("pontos", 700);
-      //filtro.whereEndsWith("nome", "fer");
-      //filtro.whereStartsWith("nome", "lu");
-      filtro.addAscendingOrder("pontos");
-      filtro.setLimit(3);
-
-      //listar os dados
-      filtro.findInBackground(new FindCallback<ParseObject>() {
+      // Fazer login do usuario
+      ParseUser.logInInBackground("lucas", "123456", new LogInCallback() {
           @Override
-          public void done(List<ParseObject> objects, ParseException e) {
-
-              if(e == null){// efetuada a lsitagem sem erros
-
-                  for( ParseObject object : objects){
-                      Log.i("ListarDados", "Objetos - " + object.get("nome") + " pontos : " + object.get("pontos"));
-                  }
-
-              }else{//Erro ao listar
-                  Log.i("ListarDados", "Erro ao consultar objeto - " + e.getMessage());
+          public void done(ParseUser user, ParseException e) {
+              if ( e == null){ //deu certo
+                  Log.i("verificarLoginUsuario", "Login feito com sucesso " );
+              }else{ // erro
+                  Log.i("verificarLoginUsuario", "Login não feito   " + e.getMessage());
               }
-
           }
       });
+
 
   }
 
