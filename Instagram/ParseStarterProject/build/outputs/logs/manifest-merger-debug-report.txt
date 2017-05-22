@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\src\main\AndroidManifest.xml:9:1-40:12
+ADDED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\src\main\AndroidManifest.xml:9:1-41:12
 	package
 		ADDED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\src\main\AndroidManifest.xml:10:5-32
 		INJECTED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\src\main\AndroidManifest.xml
@@ -22,7 +22,7 @@ ADDED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\sr
 	android:name
 		ADDED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\src\main\AndroidManifest.xml:13:22-76
 application
-ADDED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\src\main\AndroidManifest.xml:15:5-38:19
+ADDED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\src\main\AndroidManifest.xml:15:5-39:19
 MERGED from [com.android.support:appcompat-v7:22.2.0] C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.0] C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
 	android:label
@@ -64,9 +64,13 @@ ADDED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\sr
 	android:name
 		ADDED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\src\main\AndroidManifest.xml:34:27-74
 activity#com.parse.starter.activity.MainActivity
-ADDED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\src\main\AndroidManifest.xml:37:9-68
+ADDED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\src\main\AndroidManifest.xml:37:9-59
 	android:name
 		ADDED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\src\main\AndroidManifest.xml:37:19-56
+activity#com.parse.starter.activity.CadastroActivity
+ADDED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\src\main\AndroidManifest.xml:38:9-72
+	android:name
+		ADDED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\src\main\AndroidManifest.xml:38:19-60
 uses-sdk
 INJECTED from C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:22.2.0] C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:20:5-43
