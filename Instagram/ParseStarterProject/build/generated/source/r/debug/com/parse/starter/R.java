@@ -1551,10 +1551,10 @@ containing a value of this type.
         public static final int alertTitle=0x7f0c0030;
         public static final int always=0x7f0c0016;
         public static final int beginning=0x7f0c0013;
-        public static final int button=0x7f0c0058;
         public static final int button2=0x7f0c005b;
         public static final int buttonPanel=0x7f0c0036;
         public static final int button_cadastrar=0x7f0c0053;
+        public static final int button_logar=0x7f0c0058;
         public static final int cancel_action=0x7f0c005d;
         public static final int checkbox=0x7f0c0038;
         public static final int chronometer=0x7f0c0063;
@@ -1567,8 +1567,8 @@ containing a value of this type.
         public static final int dialog=0x7f0c001b;
         public static final int disableHome=0x7f0c000c;
         public static final int dropdown=0x7f0c001c;
-        public static final int editText=0x7f0c0056;
-        public static final int editText2=0x7f0c0057;
+        public static final int edit_login_senha=0x7f0c0057;
+        public static final int edit_login_usuario=0x7f0c0056;
         public static final int edit_query=0x7f0c0042;
         public static final int end=0x7f0c0014;
         public static final int end_padder=0x7f0c0068;
@@ -1624,9 +1624,9 @@ containing a value of this type.
         public static final int text2=0x7f0c0064;
         public static final int textSpacerNoButtons=0x7f0c0033;
         public static final int textView=0x7f0c0059;
-        public static final int textView2=0x7f0c0054;
         public static final int textView3=0x7f0c005a;
         public static final int text_email=0x7f0c0051;
+        public static final int text_faca_login=0x7f0c0054;
         public static final int text_senha=0x7f0c0052;
         public static final int text_usuario=0x7f0c0050;
         public static final int time=0x7f0c0062;

@@ -88,8 +88,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/fazer_login"
-        android:id="@+id/textView2"
+        android:id="@+id/text_faca_login"
         android:layout_below="@+id/button_cadastrar"
         android:layout_centerHorizontal="true"
-        android:onClick="abrirLoginUsuario" />
+        />
 </RelativeLayout>
