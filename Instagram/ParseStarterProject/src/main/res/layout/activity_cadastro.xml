@@ -23,7 +23,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText3"
+        android:id="@+id/text_usuario"
         android:layout_below="@+id/imageView2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -41,14 +41,14 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText4"
+        android:id="@+id/text_email"
         android:background="@drawable/fundo_caixa_texto"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
         android:hint="Digite seu email"
         android:padding="16dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/text_usuario"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText5"
+        android:id="@+id/text_senha"
 
         android:background="@drawable/fundo_caixa_texto"
         android:textColor="@android:color/white"
@@ -66,7 +66,7 @@
         android:padding="16dp"
 
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/editText4"
+        android:layout_below="@+id/text_email"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -74,8 +74,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/botao_cadastrar"
-        android:id="@+id/button2"
-        android:layout_below="@+id/editText5"
+        android:id="@+id/button_cadastrar"
+        android:layout_below="@+id/text_senha"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
@@ -89,7 +89,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/fazer_login"
         android:id="@+id/textView2"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/button_cadastrar"
         android:layout_centerHorizontal="true"
         android:onClick="abrirLoginUsuario" />
 </RelativeLayout>
