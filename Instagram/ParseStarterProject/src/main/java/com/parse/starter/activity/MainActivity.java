@@ -11,8 +11,10 @@ package com.parse.starter.activity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.parse.FindCallback;
@@ -32,56 +34,26 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-      super.onCreate(savedInstanceState);
-      setContentView(R.layout.activity_main);
-/*
-      // Cadastro de usuários
+    private Toolbar toolbarPrincipal;
 
-      ParseUser usuario = new ParseUser();
-      usuario.setUsername("lucas");
-      usuario.setPassword("123456");
-      usuario.setEmail("lucas@gmail.com");
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-      // cadastrar
-      usuario.signUpInBackground(new SignUpCallback() {
-          @Override
-          public void done(ParseException e) {
-              if ( e == null){ //deu certo
-                  Log.i("CadastroUsuario", "Sucesso ao cadastrar usuario " + e.getMessage());
-              }else{ // erro
-                  Log.i("CadastroUsuario", "Erro ao cadastrar usuario " + e.getMessage());
-              }
+        //Configuração Toolbar
+        toolbarPrincipal = (Toolbar) findViewById(R.id.toolbar_principal);
+        toolbarPrincipal.setLogo(R.drawable.instagramlogo);
+        setSupportActionBar(toolbarPrincipal);
 
-          }
-      });
-        */
+    }
 
-      //Verificar usuario logado
-      //deslogar usuario
-      //ParseUser.logOut();
-        /*
-      if( ParseUser.getCurrentUser() != null){
-          Log.i("LoginUsuario", "Usuario logado ");
-      }else{// Não esta logado
-          Log.i("LoginUsuario", "Usuario não logado " );
-      }*/
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
 
-      // Fazer login do usuario
-      ParseUser.logInInBackground("lucas", "123456", new LogInCallback() {
-          @Override
-          public void done(ParseUser user, ParseException e) {
-              if ( e == null){ //deu certo
-                  Log.i("verificarLoginUsuario", "Login feito com sucesso " );
-              }else{ // erro
-                  Log.i("verificarLoginUsuario", "Login não feito   " + e.getMessage());
-              }
-          }
-      });
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
 
-
-  }
-
-
+    }
 }
