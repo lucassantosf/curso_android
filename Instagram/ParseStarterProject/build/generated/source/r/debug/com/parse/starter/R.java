@@ -1527,10 +1527,11 @@ containing a value of this type.
         public static final int fundo_botao=0x7f02003b;
         public static final int fundo_caixa_texto=0x7f02003c;
         public static final int fundo_degrade=0x7f02003d;
-        public static final int instagramlogo=0x7f02003e;
-        public static final int logo=0x7f02003f;
-        public static final int notification_template_icon_bg=0x7f020041;
-        public static final int usuario=0x7f020040;
+        public static final int ic_action_cameraa=0x7f02003e;
+        public static final int instagramlogo=0x7f02003f;
+        public static final int logo=0x7f020040;
+        public static final int notification_template_icon_bg=0x7f020042;
+        public static final int usuario=0x7f020041;
     }
     public static final class id {
         public static final int action0=0x7f0c005b;

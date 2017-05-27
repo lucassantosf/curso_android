@@ -8,6 +8,7 @@
  */
 package com.parse.starter.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -55,5 +56,30 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_main, menu);
         return true;
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch ( item.getItemId() ){
+            case R.id.action_sair:
+                //fazer algo
+                deslogarUsuario();
+                return true;
+            case R.id.action_configuracoes:
+                return true;
+            case R.id.action_compartilhar:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+
+        }
+    }
+
+    private void deslogarUsuario(){
+        ParseUser.logOut();
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 }
