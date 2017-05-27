@@ -2,46 +2,32 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\lucas\.gradle\caches\modules-2\files-2.1\com.parse\parse-android\1.13.0\58a7d54b6a4f28be11f0cecec93097eddf473e6f\parse-android-1.13.0.jar"
+        jar="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="58a7d54b6a4f28be11f0cecec93097eddf473e6f">
-        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\parse-android-1.13.0-c4b8daa839a726fc284da3def1b2518e9c43c0fd.jar" />
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-7cd31e0b3cf5d40b35c59072ca4dc17cc98232d4.jar" />
     </item>
     <item
-        jar="C:\Users\lucas\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jar="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0-54fa9977a7c6f7e1103ac7663eda2ef11219e10d.jar" />
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-d145bc6a0ad9f07ef8648eca7f1c77f2be97d22c.jar" />
     </item>
     <item
-        jar="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-80f0319fd5a4aba675c0e2c7724961c10bd5ddd3.jar" />
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\support-annotations-23.0.0-3f77e93e5ed0a0d7276beffe8309c2818d2dc483.jar" />
     </item>
     <item
-        jar="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jar="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-efffe0da0575cf7e850832d0e87ae95ae0ef8e2d.jar" />
-    </item>
-    <item
-        jar="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-bdd1002bc28149da8be0f2ff9562b9fc4f542abf.jar" />
-    </item>
-    <item
-        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-70ba567356d3f4e70248bb87208265e9c5e15549.jar" />
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-02553fd3e92fd399e570990dbe692c1e08bcc77c.jar" />
     </item>
 
 </items>

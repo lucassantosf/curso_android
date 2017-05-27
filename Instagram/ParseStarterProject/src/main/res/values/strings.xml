@@ -21,4 +21,7 @@
     <string name="crie_conta">Não tem conta? Crie uma</string>
     <string name="botao_cadastrar">Cadastrar</string>
     <string name="fazer_login">Já tem conta? Faça login !</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
