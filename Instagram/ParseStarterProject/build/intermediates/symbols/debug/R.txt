@@ -414,10 +414,12 @@ int drawable fundo_botao 0x7f02003b
 int drawable fundo_caixa_texto 0x7f02003c
 int drawable fundo_degrade 0x7f02003d
 int drawable ic_action_cameraa 0x7f02003e
-int drawable instagramlogo 0x7f02003f
-int drawable logo 0x7f020040
-int drawable notification_template_icon_bg 0x7f020042
-int drawable usuario 0x7f020041
+int drawable ic_action_home 0x7f02003f
+int drawable ic_people 0x7f020040
+int drawable instagramlogo 0x7f020041
+int drawable logo 0x7f020042
+int drawable notification_template_icon_bg 0x7f020044
+int drawable usuario 0x7f020043
 int id action0 0x7f0c005f
 int id action_bar 0x7f0c0040
 int id action_bar_activity_content 0x7f0c0000
