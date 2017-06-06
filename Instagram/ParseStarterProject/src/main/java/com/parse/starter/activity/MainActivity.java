@@ -9,6 +9,8 @@
 package com.parse.starter.activity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.content.ContextCompat;
@@ -20,12 +22,14 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.GetCallback;
 import com.parse.LogInCallback;
 import com.parse.ParseAnalytics;
 import com.parse.ParseException;
+import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
@@ -35,6 +39,10 @@ import com.parse.starter.R;
 import com.parse.starter.adapter.TabasAdapter;
 import com.parse.starter.util.SlidingTabLayout;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 
@@ -100,6 +108,8 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, 1);
     }
 
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -107,7 +117,47 @@ public class MainActivity extends AppCompatActivity {
         //Testar processo de retorno dos dados
         if( requestCode == 1 && resultCode == RESULT_OK && data!= null ){
 
+            //recuperar o local do recurso
+            Uri localImagemSelecionada = data.getData();
 
+            //recupera a imagem do local que foi selecionada
+            try {
+                Bitmap imagem = MediaStore.Images.Media.getBitmap( getContentResolver() , localImagemSelecionada);
+
+                //comprimir para formato PNG
+                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                imagem.compress(Bitmap.CompressFormat.PNG, 75, stream);
+
+                //criar um array de bytes de imagem
+                byte[] byteArray = stream.toByteArray();
+
+                //criar um arquivo com formato próprio do parse
+                SimpleDateFormat dateFormat = new SimpleDateFormat("ddmmaaaahhmmss");
+                String nomeImagem  = dateFormat.format(new Date());
+                ParseFile arquivoParse = new ParseFile(nomeImagem+"imagem.png", byteArray);
+
+                //monta objeto para salvar no Parse
+                ParseObject parseObject = new ParseObject("imagem");
+                parseObject.put("username", ParseUser.getCurrentUser().getUsername());
+                parseObject.put("imagem", arquivoParse);
+
+                //salvar os dados
+                parseObject.saveInBackground(new SaveCallback() {
+                    @Override
+                    public void done(ParseException e) {
+
+                        if(e != null){ // sucesso
+                            Toast.makeText(getApplicationContext(), "Sua imagem foi postada !!", Toast.LENGTH_LONG).show();
+                        }else{ //erro
+                            Toast.makeText(getApplicationContext(), "Erro ao postar imagem !!", Toast.LENGTH_LONG).show();
+                        }
+                    }
+
+                });
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
