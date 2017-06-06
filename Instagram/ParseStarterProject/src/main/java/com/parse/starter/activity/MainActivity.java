@@ -10,6 +10,7 @@ package com.parse.starter.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
@@ -86,9 +87,27 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_configuracoes:
                 return true;
             case R.id.action_compartilhar:
+                compartilharFoto();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void compartilharFoto(){
+
+        Intent intent = new Intent( Intent.ACTION_PICK , MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(intent, 1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        //Testar processo de retorno dos dados
+        if( requestCode == 1 && resultCode == RESULT_OK && data!= null ){
+
+
         }
     }
 
