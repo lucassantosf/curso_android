@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 import com.parse.ParseObject;
 import com.parse.starter.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +53,11 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
             //recuperar componentes da tela
             ImageView imagemPostagem = (ImageView) view.findViewById(R.id.image_lista_postagem);
             ParseObject parseObject = postagens.get(position);
-            parseObject.getParseFile("imagem");
+            //parseObject.getParseFile("imagem");
+            Picasso.with(context)
+                    .load(parseObject.getParseFile("imagem").getUrl())
+                    .fit()
+                    .into(imagemPostagem);
         }
 
         return view;

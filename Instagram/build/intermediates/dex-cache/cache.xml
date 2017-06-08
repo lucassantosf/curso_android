@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-d145bc6a0ad9f07ef8648eca7f1c77f2be97d22c.jar" />
+    </item>
+    <item
         jar="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -9,11 +16,11 @@
         <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-7cd31e0b3cf5d40b35c59072ca4dc17cc98232d4.jar" />
     </item>
     <item
-        jar="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jar="C:\Users\lucas\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
-        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-d145bc6a0ad9f07ef8648eca7f1c77f2be97d22c.jar" />
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\picasso-2.5.2-ca334bac734ed735c36fb5d06d6381333eb528ee.jar" />
     </item>
     <item
         jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
