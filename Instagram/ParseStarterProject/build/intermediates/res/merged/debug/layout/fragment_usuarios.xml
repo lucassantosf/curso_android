@@ -5,19 +5,13 @@
     tools:context="com.parse.starter.fragments.UsuariosFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-    <TextView
+        <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Usuarios"
-        android:id="@+id/textView3"
-        android:layout_gravity="center"
-        android:textColor="@android:color/black"/>
+        android:id="@+id/list_usuarios"
+            android:divider="@color/cinzaEscuro"
+            android:dividerHeight="1dp"
+        android:layout_gravity="center_horizontal|top" />
 
 </FrameLayout>
 <!-- From: file:/C:/Users/lucas/Desktop/curso_android/Instagram/ParseStarterProject/src/main/res/layout/fragment_usuarios.xml -->
