@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-b2c282a4834fea9cb5d581b9d6cd1fae30115d3c.jar" />
+    </item>
+    <item
         jar="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -16,18 +23,18 @@
         <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-7cd31e0b3cf5d40b35c59072ca4dc17cc98232d4.jar" />
     </item>
     <item
-        jar="C:\Users\lucas\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\picasso-2.5.2-ca334bac734ed735c36fb5d06d6381333eb528ee.jar" />
-    </item>
-    <item
         jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
         <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\support-annotations-23.0.0-3f77e93e5ed0a0d7276beffe8309c2818d2dc483.jar" />
+    </item>
+    <item
+        jar="C:\Users\lucas\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\pre-dexed\debug\picasso-2.5.2-ca334bac734ed735c36fb5d06d6381333eb528ee.jar" />
     </item>
     <item
         jar="C:\Users\lucas\Desktop\curso_android\Instagram\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"

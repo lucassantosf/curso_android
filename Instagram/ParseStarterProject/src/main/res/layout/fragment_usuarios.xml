@@ -9,8 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/list_usuarios"
-            android:divider="@color/cinzaEscuro"
-            android:dividerHeight="1dp"
+        android:divider="@color/cinza"
+        android:dividerHeight="1dp"
         android:layout_gravity="center_horizontal|top" />
 
 </FrameLayout>
